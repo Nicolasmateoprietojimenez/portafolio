@@ -1,0 +1,41 @@
+*{
+    margin: auto;
+    padding: 0%;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: aqua;
+}
+section{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(176, 75, 230);
+}
+.menu {
+    width: 200px;
+    max-height: 150px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+  
+.menu::-webkit-scrollbar {
+    display: none;
+}
+  
+.menu a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: black;
+}
+  
+.resaltada {
+    font-weight: bold;
+    background-color: lightblue;
+}
+  
