@@ -1,0 +1,16 @@
+@font-face {
+    font-family: '8bit';
+    src: url('../fuentes/ARCADECLASSIC.TTF')format('truetype');
+}
+@font-face {
+    font-family: 'lazer';
+    src: url('../fuentes/Lazer84.ttf')format('truetype');
+}
+@font-face {
+    font-family: '8bits';
+    src: url('../fuentes/SquarePixel22Regular-WyBAE.ttf')format('truetype');
+}
+@font-face {
+    font-family: '8bitdel';
+    src: url('../fuentes/8-bit\ fortress.ttf')format('truetype');
+}

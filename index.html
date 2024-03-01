@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
-    <div class="fondo">
+    <div id="fade" class="fondo">
         <img id='partex'src="img/efondo.png" alt="">
         <img id='partexx'src="img/efondo.png" alt="">
     </div>
     <div class="cont1">
-            <h1>Mi Portafolio</h1>
-            <h2>Mateo Jimenez</h2>
-            <p>Presione pa continuar</p
+            <h1>DEVELOPER PORTAFOLIO</h1>
+            <p class="glitch">
+                <span aria-hidden="true">Mateo J imenez</span>
+                Mateo J imenez
+                <span aria-hidden="true">Mateo J imenez</span>
+            </p>
+            <h2 id="pres">Presione 'P' para continuar</h2>
     </div>
+
+    <button id="muteButton" style="background:none; border:none; cursor:pointer; position:fixed; top:20px; right:20px; z-index:2;">
+        <img src="path/to/your/muted-image.png" id="muteIcon" alt="Mute/Unmute" style="width:50px; height:auto;">
+    </button>
+    
+    <audio id="backgroundMusic" src="songs/opening.ogg" preload="auto" loop></audio>
+    <audio id="start" src="songs/start.ogg" preload="auto"></audio>
+
+    <script src="src/controller.js"></script>
 </body>
 </html>

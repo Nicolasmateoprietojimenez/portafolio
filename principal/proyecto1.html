@@ -2,10 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Slider</title>
+    <link rel="stylesheet" href="../css/stylesx.css">
+    <link rel="stylesheet" href="../css/fonts.css">
 </head>
 <body>
+    <header>
+        <p class="glitch">
+            <span aria-hidden="true">Nombre Proyecto</span>
+            Nombre Proyecto
+            <span aria-hidden="true">Nombre Proyecto</span>
+        </p>
+        <div class="navegacion">
+            <a href="">Proyectos</a>
+            <a href="">Contacto</a>
+            <a href="">Sobre mi</a>
+        </div>
+
+    </header>
     
+    <main>
+        <div class="slider-frame">
+            <ul>
+                <li><img src="imgs/a (4).jpg" alt=""></li>
+                <li><img src="imgs/a (3).jpg" alt=""></li>
+                <li><img src="imgs/a (2).jpg" alt=""></li>
+                <li><img src="imgs/a (2).jpg" alt=""></li>
+            </ul>
+        </div>
+
+        <section class="seccion-dos">
+            <h2>Proposito</h2>
+            <p>  Desripcion del Proyecto <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad, facere ut libero repellendus at atque excepturi unde earum animi, soluta odit minima illum, sapiente quis quod adipisci sit vel?</p>
+
+
+        </section>
+        <section class="seccion-tres">
+            <div>
+            <h2>Descripcion proyecto</h2>
+                <p>informacion acerca del proyecto: <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo adipisci doloribus, et quasi, aliquam voluptates temporibus accusantium totam consequuntur, beatae cum magnam. Est, animi labore tempora sunt qui earum aliquid.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo adipisci doloribus, et quasi, aliquam voluptates temporibus accusantium totam consequuntur, beatae cum magnam. Est, animi labore tempora sunt qui earum aliquid.
+                </p>
+            </div>
+        </section>
+        <section class="seccion-cuatro">
+            <div class="title">
+                <h3>Galeria</h3>
+            </div>
+            <div class="slider-container">
+                <div class="slider-images">
+                    <div class="slider-img">
+                        <img src="imgs/a (2).jpg" alt="1" />
+                        <h1>Login</h1>
+                        <div class="details">
+                            <h2>Login</h2>
+                            <p>Inicio de <br>sesión</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="imgs/a (2).jpg" alt="2" />
+                        <h1>Dashboard</h1>
+                        <div class="details">
+                            <h2>Dashboard</h2>
+                            <p>Panel de <br>control</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="imgs/a (2).jpg" alt="3" />
+                        <h1>Perfil</h1>
+                        <div class="details">
+                            <h2>Perfil</h2>
+                            <p>Perfil de <br>usuario</p>
+                        </div>
+                    </div>
+                    <div class="slider-img active">
+                        <img src="imgs/a (2).jpg" alt="4" />
+                        <h1>Configuración</h1>
+                        <div class="details">
+                            <h2>Configuración</h2>
+                            <p>Ajustes del <br>proyecto</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="imgs/a (2).jpg" alt="5" />
+                        <h1>Notificaciones</h1>
+                        <div class="details">
+                            <h2>Notificaciones</h2>
+                            <p>Gestión de <br>notificaciones</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="imgs/a (2).jpg" alt="6" />
+                        <h1>Analytics</h1>
+                        <div class="details">
+                            <h2>Analytics</h2>
+                            <p>Análisis<br>  de datos</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="imgs/a (2).jpg" alt="7" />
+                        <h1>Integraciones</h1>
+                        <div class="details">
+                            <h2>Integraciones</h2>
+                            <p>Integración con<br>  otras plataformas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="redes-sociales">
+                    <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://twitter.com"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="https://instagram.com"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://linkedin.com"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+                <div class="contacto">
+                    <p>Contacto:</p>
+                    <p>Email: info@ejemplo.com</p>
+                    <p>Teléfono: +1234567890</p>
+                </div>
+            </div>
+            <div class="marca-agua">
+                <p>© 2024 Todos los derechos reservados</p>
+            </div>
+        </footer>
+        
+    </main>
+    <script src="../src/jQuery.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
 </body>
 </html>
