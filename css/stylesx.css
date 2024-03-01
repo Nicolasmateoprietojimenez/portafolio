@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+
 }
 
 body, html {
     height: 100%;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 header {
     background-color:#000000;
     width: 100%;
@@ -126,7 +129,7 @@ header {
 }
 
 .seccion-dos {
-    background-color: rgba(0, 0, 0, 0.625);
+    background-color: rgba(25, 100, 137, 0.564);
     position: absolute;
     top: 10vh;
     width: 100%;
@@ -181,6 +184,7 @@ header {
     align-items: center;
     text-align: center;
     color: #fff;
+
 }
 
 .seccion-tres p {
@@ -220,9 +224,9 @@ header {
 }
 
 .seccion-cuatro{
-    background-color: rgb(0, 0, 0);
+  background-color: rgba(25, 100, 137, 0.564);
     position: absolute;
-    top: 150vh;
+    top: 160vh;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -239,12 +243,17 @@ header {
 }
 
 .title h3 {
-    color: #000000;
+    color: #ffffff;
     font-size: 500%;
     font-family: 'lazer';
     font-family: 'lazer';
     letter-spacing: 5px;
     margin-top: 2%;
+    text-shadow: 
+    -3px -3px 0 #000,  
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+     3px  3px 0 #000;
 }
 
 .seccion-cuatro h1{
@@ -377,7 +386,7 @@ footer {
     height: 40vh;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 250vh;
+    top: 260vh;
     color: #fff;
     padding: 20px;
     display: flex;

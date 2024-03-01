@@ -2,13 +2,16 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
     width: 100%;
     overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+  display: none;
+  }
 .fondo {
     position: relative;
     width: 200%;
