@@ -11,14 +11,64 @@
 </head>
     <style>
         *{
-            margin: auto;
+            margin: 0;
             background-color: black;
-            margin-left: 2%;
         }
-    </style>
-<body>
+        p{
+    font-family: '8bit';
+    color: white;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 0.3em;
+    text-shadow: 
+        -3px -3px 0 #000,  
+         3px -3px 0 #000,
+        -3px 3px 0 #000,
+         3px 3px 0 #000,
+         0px 0px 10px #000;
+    margin-top: 2rem;
+        }
+  #orientation-warning {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 40vh;
+  }
 
+  @media screen and (orientation: portrait) {
+    canvas {
+      display: none !important;
+    }
+
+    #orientation-warning {
+      display: block;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    #orientation-warning {
+      display: none;
+    }
+  }
+</style>
+
+<body>
+    
+  <div id="orientation-warning">
+    <p>Por favor, gira tu dispositivo para jugar en horizontal.</p>
+  </div>
     <script src="src/phaser.min.js"></script>
     <script src="src/script.js"></script>
 </body>
+<script>
+  window.addEventListener("orientationchange", () => {
+    location.reload();
+  });
+</script>
+
 </html>

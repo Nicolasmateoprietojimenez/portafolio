@@ -1,159 +1,140 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    
+*{
+  margin: 0%;
+  padding: 0%;
 }
-
 body {
     width: 100%;
     overflow-x: hidden;
 }
-::-webkit-scrollbar {
-  display: none;
-  }
+
+/* Fondo responsivo */
 .fondo {
-    position: relative;
-    width: 200%;
-    height: 100vh;
-    animation: moveBackground 8s infinite linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 100vh;
+  display: flex;
+  animation: moveBackground 8s infinite linear;
+  z-index: -1; /* Asegura que quede detrás de todo */
 }
 
 .fondo img {
-    width: 50%;
-    height: 100%;
-    float: left;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-@keyframes moveBackground {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
 
+/* Contenedor principal */
 .cont1 {
     position: fixed;
-    width: 60%;
-    left: 2%;
-    transform: translateX(-10%);
-    top: 60%;
-    transform: translateY(-50%);
-    width: 95%;
-    height: 80vh;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    transform: translate(-50%, -50%);
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
+    padding: 1rem;
 }
-.cont1 h1{
-    margin-left: 5%;
+
+/* Título principal */
+.cont1 h1 {
     font-family: '8bits';
     color: white;
-    letter-spacing: 30px;
-    font-size: 300%;
+    letter-spacing: 0.5em;
+    font-size: 2.5rem;
     text-shadow: 
-    -3px -3px 0 #000,  
-    3px -3px 0 #000,
-    -3px 3px 0 #000,
-    3px 3px 0 #000,
-    0px 0px 10px #000;
-
+        -3px -3px 0 #000,  
+         3px -3px 0 #000,
+        -3px 3px 0 #000,
+         3px 3px 0 #000,
+         0px 0px 10px #000;
+    margin-bottom: 1rem;
 }
+@keyframes moveBackground {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+/* Glitch responsivo */
 .glitch {
-    margin-top: -10%;
-    font-size: 1000%;
+    font-size: clamp(2rem, 8vw, 7rem);
     font-family: 'lazer';
     text-transform: uppercase;
     position: relative;
-  
     text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
-      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  
+                 -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                  0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
     animation: glitch 2500ms infinite;
-  }
-  
-  .glitch span {
+    margin-top: -1rem;
+}
+
+/* Glitch layers */
+.glitch span {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  .glitch span:first-child {
-      animation: glitch 650ms infinite;
-        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-        transform: translate(-0.025em, -0.0125em);
-        opacity: 0.8;
-   }
-   .glitch span:last-child {
-       animation: glitch 375ms infinite;
-        clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
-        transform: translate(0.0125em, 0.025em);
-        opacity: 0.8;
-   }
-  
-  @keyframes glitch {
-    0% {
-      text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-        -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    
-    15% {
-      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    
-    50% {
-      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-        0.05em 0 0 rgba(0, 255, 0, 0.75), 
-        0 -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    
-    100% {
-      text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
-        -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
 }
-.cont1 h2{
+.glitch span:first-child {
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-0.025em, -0.0125em);
+    opacity: 0.8;
+}
+.glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+    transform: translate(0.0125em, 0.025em);
+    opacity: 0.8;
+}
+
+/* Texto de presionar */
+.cont1 h2 {
     font-family: '8bit';
     color: white;
-    font-size: 400%;
-    letter-spacing: 10px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 0.3em;
     text-shadow: 
-    -3px -3px 0 #000,  
-    3px -3px 0 #000,
-    -3px 3px 0 #000,
-    3px 3px 0 #000,
-    0px 0px 10px #000;
+        -3px -3px 0 #000,  
+         3px -3px 0 #000,
+        -3px 3px 0 #000,
+         3px 3px 0 #000,
+         0px 0px 10px #000;
+    margin-top: 2rem;
 }
-.titila{
+
+/* Loader */
+#loader {
+    font-family: '8bit';
+    color: white;
+    font-size: clamp(2rem, 6vw, 4rem);
+    letter-spacing: 0.3em;
+    text-shadow: 
+        -3px -3px 0 #000,  
+         3px -3px 0 #000,
+        -3px 3px 0 #000,
+         3px 3px 0 #000,
+         0px 0px 10px #000;
+}
+
+/* Titilar */
+.titila {
     animation: titilar 0.1s infinite;
 }
-@keyframes titilar {
-    0% {
-      opacity: 1;
-    }
-    20% {
-        opacity: 0.5;
-      }
-    50% {
-      opacity: 0;
-    }
-    70% {
-        opacity: 0.5;
-      }
-    100% {
-      opacity: 1;
-    }
-  }
-  .fadeout {
+
+/* Fadeout */
+.fadeout {
     position: fixed;
     top: 0;
     left: 0;
@@ -163,13 +144,22 @@ body {
     opacity: 0;
     animation: fadeout-animation 3s forwards;
     z-index: 1;
-  }
-  
-  @keyframes fadeout-animation {
-    from {
-      opacity: 0;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .cont1 {
+        width: 95%;
+        padding: 1rem;
     }
-    to {
-      opacity: 1;
+
+    .cont1 h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.3em;
     }
-  }
+
+    .cont1 h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1em;
+    }
+}
